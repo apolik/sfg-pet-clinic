@@ -11,6 +11,7 @@ class SfgPetClinicApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println(System.getProperty("JAVA_HOME"));
     }
 
 }
