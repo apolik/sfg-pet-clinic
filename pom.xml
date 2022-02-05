@@ -72,7 +72,7 @@
     </build>
 
     <scm>
-        <connection>scm:git:https://github.com/dkjfal/sfg-pet-clinic.git</connection>
+        <connection>scm:git:git@github.com:dkjfal/sfg-pet-clinic.git</connection>
         <tag>HEAD</tag>
     </scm>
 </project>
