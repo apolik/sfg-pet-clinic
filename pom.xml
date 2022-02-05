@@ -44,7 +44,7 @@
     </build>
 
     <scm>
-      <developerConnection>scm:git:git@github.com:dkjfal/sfg-pet-clinic.git</developerConnection>
+      <developerConnection>scm:git:https://github.com/manishnakar/polymer-demo.git </developerConnection>
     <tag>sfg-pet-clinic-0.0.2</tag>
   </scm>
 </project>
