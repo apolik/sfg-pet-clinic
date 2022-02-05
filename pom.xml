@@ -45,6 +45,6 @@
 
     <scm>
       <developerConnection>scm:git:https://github.com/manishnakar/polymer-demo.git</developerConnection>
-    <tag>sfg-pet-clinic-0.0.2</tag>
+    <tag>HEAD</tag>
   </scm>
 </project>
