@@ -8,7 +8,10 @@ import lombok.ToString;
 /**
  * Created by Polik on 2/4/2022
  */
-@Getter @Setter @NoArgsConstructor @ToString
-public class PetType {
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+public class PetType extends BaseEntity {
     private String name;
 }

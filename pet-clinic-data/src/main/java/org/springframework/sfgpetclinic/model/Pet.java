@@ -10,10 +10,12 @@ import java.time.LocalDate;
 /**
  * Created by Polik on 2/4/2022
  */
-@Getter @Setter @NoArgsConstructor @ToString
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class Pet {
     private PetType petType;
     private Owner owner;
     private LocalDate birthday;
-
 }
