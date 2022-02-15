@@ -2,12 +2,14 @@ package org.springframework.sfgpetclinic.services.map;
 
 import org.springframework.sfgpetclinic.model.Owner;
 import org.springframework.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by Polik on 2/12/2022
  */
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
