@@ -1,7 +1,7 @@
 package org.springframework.sfgpetclinic.services.map;
 
 import org.springframework.sfgpetclinic.model.Pet;
-import org.springframework.sfgpetclinic.services.CrudService;
+import org.springframework.sfgpetclinic.services.PetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -10,7 +10,7 @@ import java.util.Set;
  * Created by Polik on 2/12/2022
  */
 @Service
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
