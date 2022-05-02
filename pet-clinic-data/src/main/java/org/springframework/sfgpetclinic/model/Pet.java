@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Polik on 2/4/2022
@@ -29,4 +31,7 @@ public class Pet extends BaseEntity {
 
     @Column(name = "birthday_date")
     private LocalDate birthday;
+
+    @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL)
+    private Set<Visit> visits = new HashSet<>();
 }
