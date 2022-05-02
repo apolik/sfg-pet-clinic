@@ -15,7 +15,6 @@ import java.util.Set;
 @Table(name = "owners")
 @EqualsAndHashCode(callSuper = true)
 public class Owner extends Person {
-
     @Column(name = "address")
     private String address;
 
