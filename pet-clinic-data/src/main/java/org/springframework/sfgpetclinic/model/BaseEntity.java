@@ -2,6 +2,7 @@ package org.springframework.sfgpetclinic.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.Hibernate;
 import org.springframework.data.domain.Persistable;
 
 import javax.persistence.GeneratedValue;
@@ -23,5 +24,22 @@ public class BaseEntity implements Serializable, Persistable<Long> {
     @Override
     public boolean isNew() {
         return id == null;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || !getClass().equals(Hibernate.getClass(o))) {
+            return false;
+        }
+        BaseEntity that = (BaseEntity) o;
+        return id != null && id.equals(that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id == null ? 0 : Integer.parseInt(id + "");
     }
 }

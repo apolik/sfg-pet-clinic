@@ -6,14 +6,13 @@ import org.springframework.sfgpetclinic.services.OwnerService;
 import org.springframework.sfgpetclinic.services.PetTypeService;
 import org.springframework.sfgpetclinic.services.SpecialtyService;
 import org.springframework.sfgpetclinic.services.VetService;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
 /**
  * Created by Polik on 2/14/2022
  */
-@Component
+//@Component
 public class DataInitializer implements CommandLineRunner {
 
     private final OwnerService ownerService;

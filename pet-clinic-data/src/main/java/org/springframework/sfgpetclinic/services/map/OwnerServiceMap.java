@@ -1,5 +1,6 @@
 package org.springframework.sfgpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.sfgpetclinic.model.Owner;
 import org.springframework.sfgpetclinic.model.Pet;
 import org.springframework.sfgpetclinic.services.OwnerService;
@@ -13,6 +14,7 @@ import java.util.Set;
  * Created by Polik on 2/12/2022
  */
 @Service
+@Profile("map")
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     private final PetTypeService petTypeService;
     private final PetService petService;

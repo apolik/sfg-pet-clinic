@@ -1,8 +1,9 @@
 package org.springframework.sfgpetclinic.model;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -11,11 +12,12 @@ import java.util.Set;
 /**
  * Created by Polik on 2/4/2022
  */
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "vets")
-@NoArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-@Data
 public class Vet extends Person {
 
     @ManyToMany(fetch = FetchType.EAGER)

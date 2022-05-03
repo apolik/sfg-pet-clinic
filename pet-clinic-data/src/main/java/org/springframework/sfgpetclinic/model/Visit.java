@@ -1,8 +1,9 @@
 package org.springframework.sfgpetclinic.model;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -10,11 +11,12 @@ import java.time.LocalDate;
 /**
  * Created by Polik on 3/2/2022
  */
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "visits")
-@NoArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-@Data
 public class Visit extends BaseEntity {
     @Column(name = "date")
     private LocalDate date;
