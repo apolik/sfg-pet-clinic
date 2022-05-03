@@ -1,5 +1,6 @@
 package org.springframework.sfgpetclinic.services.datajpa;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.sfgpetclinic.model.PetType;
 import org.springframework.sfgpetclinic.repositories.PetTypeRepository;
 import org.springframework.sfgpetclinic.services.PetTypeService;
@@ -11,6 +12,7 @@ import java.util.Set;
  * Created by Polik on 2/1/2022
  */
 @Service
+@Profile("datajpa")
 public class PetTypeServiceJpa implements PetTypeService {
     private final PetTypeRepository repository;
 

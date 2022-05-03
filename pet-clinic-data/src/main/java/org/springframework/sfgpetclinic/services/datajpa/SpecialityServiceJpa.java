@@ -1,9 +1,9 @@
 package org.springframework.sfgpetclinic.services.datajpa;
 
 import org.springframework.context.annotation.Profile;
-import org.springframework.sfgpetclinic.model.Pet;
-import org.springframework.sfgpetclinic.repositories.PetRepository;
-import org.springframework.sfgpetclinic.services.PetService;
+import org.springframework.sfgpetclinic.model.Speciality;
+import org.springframework.sfgpetclinic.repositories.SpecialityRepository;
+import org.springframework.sfgpetclinic.services.SpecialtyService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -13,30 +13,30 @@ import java.util.Set;
  */
 @Service
 @Profile("datajpa")
-public class PetServiceJpa implements PetService {
-    private final PetRepository repository;
+public class SpecialityServiceJpa implements SpecialtyService {
+    private final SpecialityRepository repository;
 
-    public PetServiceJpa(PetRepository repository) {
+    public SpecialityServiceJpa(SpecialityRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public Set<Pet> findAll() {
+    public Set<Speciality> findAll() {
         return repository.findAll();
     }
 
     @Override
-    public Pet findById(Long aLong) {
+    public Speciality findById(Long aLong) {
         return repository.findById(aLong).orElse(null);
     }
 
     @Override
-    public Pet save(Pet object) {
+    public Speciality save(Speciality object) {
         return repository.save(object);
     }
 
     @Override
-    public void delete(Pet object) {
+    public void delete(Speciality object) {
         repository.delete(object);
     }
 
