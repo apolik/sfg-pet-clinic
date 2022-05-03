@@ -3,12 +3,14 @@ package org.springframework.sfgpetclinic.services.datajpa;
 import org.springframework.sfgpetclinic.model.PetType;
 import org.springframework.sfgpetclinic.repositories.PetTypeRepository;
 import org.springframework.sfgpetclinic.services.PetTypeService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by Polik on 2/1/2022
  */
+@Service
 public class PetTypeServiceJpa implements PetTypeService {
     private final PetTypeRepository repository;
 
