@@ -1,5 +1,6 @@
 package org.springframework.sfgpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.sfgpetclinic.model.Speciality;
 import org.springframework.sfgpetclinic.model.Vet;
 import org.springframework.sfgpetclinic.services.SpecialtyService;
@@ -12,6 +13,7 @@ import java.util.Set;
  * Created by Polik on 2/12/2022
  */
 @Service
+@Profile({"default", "map"})
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     private final SpecialtyService specialtyService;
 
