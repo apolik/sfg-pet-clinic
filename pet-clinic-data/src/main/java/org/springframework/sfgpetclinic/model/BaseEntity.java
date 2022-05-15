@@ -1,6 +1,8 @@
 package org.springframework.sfgpetclinic.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
 import org.springframework.data.domain.Persistable;
@@ -15,6 +17,8 @@ import java.io.Serializable;
  * Created by Polik on 2/6/2022
  */
 @Getter @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @MappedSuperclass
 public class BaseEntity implements Serializable, Persistable<Long> {
     @Id
