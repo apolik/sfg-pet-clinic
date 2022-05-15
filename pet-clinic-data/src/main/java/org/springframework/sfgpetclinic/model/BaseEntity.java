@@ -23,7 +23,7 @@ import java.io.Serializable;
 public class BaseEntity implements Serializable, Persistable<Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    protected Long id;
 
     @Override
     public boolean isNew() {

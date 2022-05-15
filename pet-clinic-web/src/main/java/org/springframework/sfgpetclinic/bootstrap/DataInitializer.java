@@ -47,6 +47,7 @@ public class DataInitializer implements CommandLineRunner {
         PetType cat = new PetType();
         cat.setName("Cat");
         PetType savedCatPetType = petTypeService.save(cat);
+        Object
 
         Speciality radiology = new Speciality();
         radiology.setDescription("Radiology");
