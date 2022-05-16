@@ -1,5 +1,6 @@
 package org.springframework.sfgpetclinic.controllers;
 
+import lombok.AllArgsConstructor;
 import org.springframework.sfgpetclinic.services.OwnerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,23 +11,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/owners")
+@AllArgsConstructor
 public class OwnerController  {
     private final OwnerService ownerService;
 
-    public OwnerController(OwnerService ownerService) {
-        this.ownerService = ownerService;
-    }
-
     @RequestMapping({"", "/", "/index", "/index.html"})
-    public String listOwners(Model model) {
+    public String getAll(Model model) {
         model.addAttribute("owners", ownerService.findAll());
         return "owners/index";
     }
 
     @RequestMapping({"/find"})
     public String findOwners() {
-
         return "notimplemented";
     }
-
 }
